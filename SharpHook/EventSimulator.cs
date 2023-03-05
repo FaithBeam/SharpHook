@@ -66,7 +66,7 @@ public class EventSimulator : IEventSimulator
     /// </summary>
     /// <param name="button">The mouse button to press.</param>
     /// <returns>The result of the operation.</returns>
-    public UioHookResult SimulateMousePressIgnoreMouseCoordinates(MouseButton button) =>
+    public UioHookResult SimulateMousePress(MouseButton button) =>
         this.PostEventIgnoreMouseCoordinates(new()
         {
             Type = EventType.MousePressed,
@@ -78,7 +78,7 @@ public class EventSimulator : IEventSimulator
     /// </summary>
     /// <param name="button">The mouse button to release.</param>
     /// <returns>The result of the operation.</returns>
-    public UioHookResult SimulateMouseReleaseIgnoreMouseCoordinates(MouseButton button) =>
+    public UioHookResult SimulateMouseRelease(MouseButton button) =>
         this.PostEventIgnoreMouseCoordinates(new()
         {
             Type = EventType.MouseReleased,
