@@ -1042,7 +1042,7 @@
             <remarks>
             <para>This field is available only for the <see cref="F:SharpHook.Native.EventType.KeyTyped" /> event.</para>
             <para>
-            This field is of type <see cref="T:System.UInt16" /> only for marshalling reasons.
+            This field is of type <see cref="T:System.UInt16" /> purely for marshalling reasons.
             It should be used as a <see cref="T:System.Char" />.
             </para>
             </remarks>
@@ -2136,6 +2136,88 @@
         <member name="M:SharpHook.Native.UioHook.PostEvent(SharpHook.Native.UioHookEvent@)">
             <summary>
             Posts a fake input event.
+            </summary>
+            <param name="e">The event to post.</param>
+            <returns>The result of the operation.</returns>
+            <remarks>
+            <para>
+            The instance of the event doesn't need all fields to have value. Only <see cref="F:SharpHook.Native.UioHookEvent.Type" />,
+            <see cref="F:SharpHook.Native.UioHookEvent.Keyboard" />/<see cref="F:SharpHook.Native.UioHookEvent.Mouse" />/<see cref="F:SharpHook.Native.UioHookEvent.Wheel" /> should
+            be present.
+            </para>
+            <para>
+            The following table describes the specifics of simulating each event type.
+            <list type="table">
+            <listheader>
+            <term>Event type</term>
+            <term>Description</term>
+            </listheader>
+            <item>
+            <term><see cref="F:SharpHook.Native.EventType.HookEnabled" /></term>
+            <term>Events of this type are ignored.</term>
+            </item>
+            <item>
+            <term><see cref="F:SharpHook.Native.EventType.HookDisabled" /></term>
+            <term>Events of this type are ignored.</term>
+            </item>
+            <item>
+            <term><see cref="F:SharpHook.Native.EventType.KeyPressed" /></term>
+            <term>Only <see cref="F:SharpHook.Native.KeyboardEventData.KeyCode" /> is considered.</term>
+            </item>
+            <item>
+            <term><see cref="F:SharpHook.Native.EventType.KeyReleased" /></term>
+            <term>Only <see cref="F:SharpHook.Native.KeyboardEventData.KeyCode" /> is considered.</term>
+            </item>
+            <item>
+            <term><see cref="F:SharpHook.Native.EventType.KeyTyped" /></term>
+            <term>Events of this type are ignored.</term>
+            </item>
+            <item>
+            <term><see cref="F:SharpHook.Native.EventType.MousePressed" /></term>
+            <term>
+            Only <see cref="F:SharpHook.Native.MouseWheelEventData.X" />, <see cref="F:SharpHook.Native.MouseWheelEventData.Y" />,
+            and <see cref="F:SharpHook.Native.MouseEventData.Button" /> are considered.
+            </term>
+            </item>
+            <item>
+            <term><see cref="F:SharpHook.Native.EventType.MouseReleased" /></term>
+            <term>
+            Only <see cref="F:SharpHook.Native.MouseWheelEventData.X" />, <see cref="F:SharpHook.Native.MouseWheelEventData.Y" />,
+            and <see cref="F:SharpHook.Native.MouseEventData.Button" /> are considered.
+            </term>
+            </item>
+            <item>
+            <term><see cref="F:SharpHook.Native.EventType.MouseClicked" /></term>
+            <term>Events of this type are ignored.</term>
+            </item>
+            <item>
+            <term><see cref="F:SharpHook.Native.EventType.MouseMoved" /></term>
+            <term>Only <see cref="F:SharpHook.Native.MouseEventData.X" /> and <see cref="F:SharpHook.Native.MouseEventData.Y" /> are considered.</term>
+            </item>
+            <item>
+            <term><see cref="F:SharpHook.Native.EventType.MouseDragged" /></term>
+            <term>Not recommended to use; same as <see cref="F:SharpHook.Native.EventType.MouseMoved" />.</term>
+            </item>
+            <item>
+            <term><see cref="F:SharpHook.Native.EventType.MouseWheel" /></term>
+            <term>
+            Only <see cref="F:SharpHook.Native.MouseWheelEventData.X" />, <see cref="F:SharpHook.Native.MouseWheelEventData.Y" />,
+            <see cref="F:SharpHook.Native.MouseWheelEventData.Amount" />, and <see cref="F:SharpHook.Native.MouseWheelEventData.Rotation" /> are considered.
+            </term>
+            </item>
+            </list>
+            </para>
+            <para>
+            Mouse wheel simulation is a little inconsistent across platforms, and not documented. View the source code of
+            libuiohook for more details.
+            </para>
+            </remarks>
+            <seealso cref="T:SharpHook.EventSimulator" />
+        </member>
+        <member name="M:SharpHook.Native.UioHook.PostEventIgnoreMouseCoordinates(SharpHook.Native.UioHookEvent@)">
+            <summary>
+            Posts a fake input event and ignores the mouse coordinates. This is useful to send mouse button events
+            at the current mouse cursor position.
             </summary>
             <param name="e">The event to post.</param>
             <returns>The result of the operation.</returns>
