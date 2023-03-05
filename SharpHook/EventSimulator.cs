@@ -60,6 +60,33 @@ public class EventSimulator : IEventSimulator
             Mouse = new() { Button = button, X = x, Y = y }
         });
 
+#if Windows || Linux
+    /// <summary>
+    /// Simulates pressing a mouse button at the current mouse coordinates.
+    /// </summary>
+    /// <param name="button">The mouse button to press.</param>
+    /// <returns>The result of the operation.</returns>
+    public UioHookResult SimulateMousePressIgnoreMouseCoordinates(MouseButton button) =>
+        this.PostEventIgnoreMouseCoordinates(new()
+        {
+            Type = EventType.MousePressed,
+            Mouse = new() { Button = button }
+        });
+
+    /// <summary>
+    /// Simulates releasing a mouse button at the current mouse coordinates.
+    /// </summary>
+    /// <param name="button">The mouse button to release.</param>
+    /// <returns>The result of the operation.</returns>
+    public UioHookResult SimulateMouseReleaseIgnoreMouseCoordinates(MouseButton button) =>
+        this.PostEventIgnoreMouseCoordinates(new()
+        {
+            Type = EventType.MouseReleased,
+            Mouse = new() { Button = button }
+        });
+#endif
+
+
     /// <summary>
     /// Simulates moving a mouse pointer.
     /// </summary>
@@ -100,4 +127,9 @@ public class EventSimulator : IEventSimulator
 
     private UioHookResult PostEvent(UioHookEvent e) =>
         UioHook.PostEvent(ref e);
+
+#if Windows || Linux
+    private UioHookResult PostEventIgnoreMouseCoordinates(UioHookEvent e) =>
+        UioHook.PostEventIgnoreMouseCoordinates(ref e);
+#endif
 }
