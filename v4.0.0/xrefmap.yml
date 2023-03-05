@@ -65,6 +65,19 @@ references:
   isSpec: "True"
   fullName: SharpHook.EventSimulator.SimulateMousePress
   nameWithType: EventSimulator.SimulateMousePress
+- uid: SharpHook.EventSimulator.SimulateMousePressIgnoreMouseCoordinates(SharpHook.Native.MouseButton)
+  name: SimulateMousePressIgnoreMouseCoordinates(MouseButton)
+  href: api/SharpHook.EventSimulator.html#SharpHook_EventSimulator_SimulateMousePressIgnoreMouseCoordinates_SharpHook_Native_MouseButton_
+  commentId: M:SharpHook.EventSimulator.SimulateMousePressIgnoreMouseCoordinates(SharpHook.Native.MouseButton)
+  fullName: SharpHook.EventSimulator.SimulateMousePressIgnoreMouseCoordinates(SharpHook.Native.MouseButton)
+  nameWithType: EventSimulator.SimulateMousePressIgnoreMouseCoordinates(MouseButton)
+- uid: SharpHook.EventSimulator.SimulateMousePressIgnoreMouseCoordinates*
+  name: SimulateMousePressIgnoreMouseCoordinates
+  href: api/SharpHook.EventSimulator.html#SharpHook_EventSimulator_SimulateMousePressIgnoreMouseCoordinates_
+  commentId: Overload:SharpHook.EventSimulator.SimulateMousePressIgnoreMouseCoordinates
+  isSpec: "True"
+  fullName: SharpHook.EventSimulator.SimulateMousePressIgnoreMouseCoordinates
+  nameWithType: EventSimulator.SimulateMousePressIgnoreMouseCoordinates
 - uid: SharpHook.EventSimulator.SimulateMouseRelease(System.Int16,System.Int16,SharpHook.Native.MouseButton)
   name: SimulateMouseRelease(Int16, Int16, MouseButton)
   href: api/SharpHook.EventSimulator.html#SharpHook_EventSimulator_SimulateMouseRelease_System_Int16_System_Int16_SharpHook_Native_MouseButton_
@@ -78,6 +91,19 @@ references:
   isSpec: "True"
   fullName: SharpHook.EventSimulator.SimulateMouseRelease
   nameWithType: EventSimulator.SimulateMouseRelease
+- uid: SharpHook.EventSimulator.SimulateMouseReleaseIgnoreMouseCoordinates(SharpHook.Native.MouseButton)
+  name: SimulateMouseReleaseIgnoreMouseCoordinates(MouseButton)
+  href: api/SharpHook.EventSimulator.html#SharpHook_EventSimulator_SimulateMouseReleaseIgnoreMouseCoordinates_SharpHook_Native_MouseButton_
+  commentId: M:SharpHook.EventSimulator.SimulateMouseReleaseIgnoreMouseCoordinates(SharpHook.Native.MouseButton)
+  fullName: SharpHook.EventSimulator.SimulateMouseReleaseIgnoreMouseCoordinates(SharpHook.Native.MouseButton)
+  nameWithType: EventSimulator.SimulateMouseReleaseIgnoreMouseCoordinates(MouseButton)
+- uid: SharpHook.EventSimulator.SimulateMouseReleaseIgnoreMouseCoordinates*
+  name: SimulateMouseReleaseIgnoreMouseCoordinates
+  href: api/SharpHook.EventSimulator.html#SharpHook_EventSimulator_SimulateMouseReleaseIgnoreMouseCoordinates_
+  commentId: Overload:SharpHook.EventSimulator.SimulateMouseReleaseIgnoreMouseCoordinates
+  isSpec: "True"
+  fullName: SharpHook.EventSimulator.SimulateMouseReleaseIgnoreMouseCoordinates
+  nameWithType: EventSimulator.SimulateMouseReleaseIgnoreMouseCoordinates
 - uid: SharpHook.EventSimulator.SimulateMouseWheel(System.Int16,System.Int16,System.UInt16,System.Int16)
   name: SimulateMouseWheel(Int16, Int16, UInt16, Int16)
   href: api/SharpHook.EventSimulator.html#SharpHook_EventSimulator_SimulateMouseWheel_System_Int16_System_Int16_System_UInt16_System_Int16_
