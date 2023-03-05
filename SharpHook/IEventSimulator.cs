@@ -15,14 +15,14 @@ public interface IEventSimulator
     /// </summary>
     /// <param name="keyCode">The code of the key to press.</param>
     /// <returns>The result of the operation.</returns>
-    public UioHookResult SimulateKeyPress(KeyCode keyCode);
+    UioHookResult SimulateKeyPress(KeyCode keyCode);
 
     /// <summary>
     /// Simulates releasing a key.
     /// </summary>
     /// <param name="keyCode">The code of the key to release.</param>
     /// <returns>The result of the operation.</returns>
-    public UioHookResult SimulateKeyRelease(KeyCode keyCode);
+    UioHookResult SimulateKeyRelease(KeyCode keyCode);
 
     /// <summary>
     /// Simulates pressing a mouse button at the specified coordinates.
@@ -31,7 +31,7 @@ public interface IEventSimulator
     /// <param name="y">The target Y-coordinate of the mouse pointer.</param>
     /// <param name="button">The mouse button to press.</param>
     /// <returns>The result of the operation.</returns>
-    public UioHookResult SimulateMousePress(short x, short y, MouseButton button);
+    UioHookResult SimulateMousePress(short x, short y, MouseButton button);
 
     /// <summary>
     /// Simulates releasing a mouse button at the specified coordinates.
@@ -40,7 +40,23 @@ public interface IEventSimulator
     /// <param name="y">The target Y-coordinate of the mouse pointer.</param>
     /// <param name="button">The mouse button to release.</param>
     /// <returns>The result of the operation.</returns>
-    public UioHookResult SimulateMouseRelease(short x, short y, MouseButton button);
+    UioHookResult SimulateMouseRelease(short x, short y, MouseButton button);
+
+#if Windows || Linux
+    /// <summary>
+    /// Simulates pressing a mouse button at the current mouse coordinates.
+    /// </summary>
+    /// <param name="button">The mouse button to press.</param>
+    /// <returns>The result of the operation.</returns>
+    UioHookResult SimulateMousePress(MouseButton button);
+
+    /// <summary>
+    /// Simulates releasing a mouse button at the current mouse coordinates.
+    /// </summary>
+    /// <param name="button">The mouse button to release.</param>
+    /// <returns>The result of the operation.</returns>
+    UioHookResult SimulateMouseRelease(MouseButton button);
+#endif
 
     /// <summary>
     /// Simulates moving a mouse pointer.
@@ -48,7 +64,7 @@ public interface IEventSimulator
     /// <param name="x">The target X-coordinate of the mouse pointer.</param>
     /// <param name="y">The target Y-coordinate of the mouse pointer.</param>
     /// <returns>The result of the operation.</returns>
-    public UioHookResult SimulateMouseMovement(short x, short y);
+    UioHookResult SimulateMouseMovement(short x, short y);
 
     /// <summary>
     /// Simulates scrolling the mouse wheel at the specified coordinates.
@@ -59,8 +75,14 @@ public interface IEventSimulator
     /// <param name="rotation">The wheel rotation.</param>
     /// <returns>The result of the operation.</returns>
     /// <remarks>
+    /// <para>
     /// A positive <paramref name="rotation" /> value indicates that the wheel will be rotated down and a negative value
     /// indicates that the wheel will be rotated up.
+    /// </para>
+    /// <para>
+    /// Mouse wheel simulation is a little inconsistent across platforms, and not documented. View the source code of
+    /// libuiohook for more details.
+    /// </para>
     /// </remarks>
-    public UioHookResult SimulateMouseWheel(short x, short y, ushort amount, short rotation);
+    UioHookResult SimulateMouseWheel(short x, short y, ushort amount, short rotation);
 }
