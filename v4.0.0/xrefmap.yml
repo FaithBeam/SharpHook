@@ -3233,6 +3233,22 @@ references:
   isSpec: "True"
   fullName: SharpHook.Native.UioHook.PostEvent
   nameWithType: UioHook.PostEvent
+- uid: SharpHook.Native.UioHook.PostEventIgnoreMouseCoordinates(SharpHook.Native.UioHookEvent@)
+  name: PostEventIgnoreMouseCoordinates(ref UioHookEvent)
+  href: api/SharpHook.Native.UioHook.html#SharpHook_Native_UioHook_PostEventIgnoreMouseCoordinates_SharpHook_Native_UioHookEvent__
+  commentId: M:SharpHook.Native.UioHook.PostEventIgnoreMouseCoordinates(SharpHook.Native.UioHookEvent@)
+  name.vb: PostEventIgnoreMouseCoordinates(ByRef UioHookEvent)
+  fullName: SharpHook.Native.UioHook.PostEventIgnoreMouseCoordinates(ref SharpHook.Native.UioHookEvent)
+  fullName.vb: SharpHook.Native.UioHook.PostEventIgnoreMouseCoordinates(ByRef SharpHook.Native.UioHookEvent)
+  nameWithType: UioHook.PostEventIgnoreMouseCoordinates(ref UioHookEvent)
+  nameWithType.vb: UioHook.PostEventIgnoreMouseCoordinates(ByRef UioHookEvent)
+- uid: SharpHook.Native.UioHook.PostEventIgnoreMouseCoordinates*
+  name: PostEventIgnoreMouseCoordinates
+  href: api/SharpHook.Native.UioHook.html#SharpHook_Native_UioHook_PostEventIgnoreMouseCoordinates_
+  commentId: Overload:SharpHook.Native.UioHook.PostEventIgnoreMouseCoordinates
+  isSpec: "True"
+  fullName: SharpHook.Native.UioHook.PostEventIgnoreMouseCoordinates
+  nameWithType: UioHook.PostEventIgnoreMouseCoordinates
 - uid: SharpHook.Native.UioHook.Run
   name: Run()
   href: api/SharpHook.Native.UioHook.html#SharpHook_Native_UioHook_Run
