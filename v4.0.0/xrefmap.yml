@@ -650,12 +650,6 @@ references:
   isSpec: "True"
   fullName: SharpHook.IEventSimulator.SimulateMouseMovement
   nameWithType: IEventSimulator.SimulateMouseMovement
-- uid: SharpHook.IEventSimulator.SimulateMousePress(SharpHook.Native.MouseButton)
-  name: SimulateMousePress(MouseButton)
-  href: api/SharpHook.IEventSimulator.html#SharpHook_IEventSimulator_SimulateMousePress_SharpHook_Native_MouseButton_
-  commentId: M:SharpHook.IEventSimulator.SimulateMousePress(SharpHook.Native.MouseButton)
-  fullName: SharpHook.IEventSimulator.SimulateMousePress(SharpHook.Native.MouseButton)
-  nameWithType: IEventSimulator.SimulateMousePress(MouseButton)
 - uid: SharpHook.IEventSimulator.SimulateMousePress(System.Int16,System.Int16,SharpHook.Native.MouseButton)
   name: SimulateMousePress(Int16, Int16, MouseButton)
   href: api/SharpHook.IEventSimulator.html#SharpHook_IEventSimulator_SimulateMousePress_System_Int16_System_Int16_SharpHook_Native_MouseButton_
@@ -669,12 +663,6 @@ references:
   isSpec: "True"
   fullName: SharpHook.IEventSimulator.SimulateMousePress
   nameWithType: IEventSimulator.SimulateMousePress
-- uid: SharpHook.IEventSimulator.SimulateMouseRelease(SharpHook.Native.MouseButton)
-  name: SimulateMouseRelease(MouseButton)
-  href: api/SharpHook.IEventSimulator.html#SharpHook_IEventSimulator_SimulateMouseRelease_SharpHook_Native_MouseButton_
-  commentId: M:SharpHook.IEventSimulator.SimulateMouseRelease(SharpHook.Native.MouseButton)
-  fullName: SharpHook.IEventSimulator.SimulateMouseRelease(SharpHook.Native.MouseButton)
-  nameWithType: IEventSimulator.SimulateMouseRelease(MouseButton)
 - uid: SharpHook.IEventSimulator.SimulateMouseRelease(System.Int16,System.Int16,SharpHook.Native.MouseButton)
   name: SimulateMouseRelease(Int16, Int16, MouseButton)
   href: api/SharpHook.IEventSimulator.html#SharpHook_IEventSimulator_SimulateMouseRelease_System_Int16_System_Int16_SharpHook_Native_MouseButton_
@@ -3257,22 +3245,22 @@ references:
   isSpec: "True"
   fullName: SharpHook.Native.UioHook.PostEvent
   nameWithType: UioHook.PostEvent
-- uid: SharpHook.Native.UioHook.PostEventIgnoreMouseCoordinates(SharpHook.Native.UioHookEvent@)
-  name: PostEventIgnoreMouseCoordinates(ref UioHookEvent)
-  href: api/SharpHook.Native.UioHook.html#SharpHook_Native_UioHook_PostEventIgnoreMouseCoordinates_SharpHook_Native_UioHookEvent__
-  commentId: M:SharpHook.Native.UioHook.PostEventIgnoreMouseCoordinates(SharpHook.Native.UioHookEvent@)
-  name.vb: PostEventIgnoreMouseCoordinates(ByRef UioHookEvent)
-  fullName: SharpHook.Native.UioHook.PostEventIgnoreMouseCoordinates(ref SharpHook.Native.UioHookEvent)
-  fullName.vb: SharpHook.Native.UioHook.PostEventIgnoreMouseCoordinates(ByRef SharpHook.Native.UioHookEvent)
-  nameWithType: UioHook.PostEventIgnoreMouseCoordinates(ref UioHookEvent)
-  nameWithType.vb: UioHook.PostEventIgnoreMouseCoordinates(ByRef UioHookEvent)
-- uid: SharpHook.Native.UioHook.PostEventIgnoreMouseCoordinates*
-  name: PostEventIgnoreMouseCoordinates
-  href: api/SharpHook.Native.UioHook.html#SharpHook_Native_UioHook_PostEventIgnoreMouseCoordinates_
-  commentId: Overload:SharpHook.Native.UioHook.PostEventIgnoreMouseCoordinates
+- uid: SharpHook.Native.UioHook.PostEventDontMoveMouse(SharpHook.Native.UioHookEvent@)
+  name: PostEventDontMoveMouse(ref UioHookEvent)
+  href: api/SharpHook.Native.UioHook.html#SharpHook_Native_UioHook_PostEventDontMoveMouse_SharpHook_Native_UioHookEvent__
+  commentId: M:SharpHook.Native.UioHook.PostEventDontMoveMouse(SharpHook.Native.UioHookEvent@)
+  name.vb: PostEventDontMoveMouse(ByRef UioHookEvent)
+  fullName: SharpHook.Native.UioHook.PostEventDontMoveMouse(ref SharpHook.Native.UioHookEvent)
+  fullName.vb: SharpHook.Native.UioHook.PostEventDontMoveMouse(ByRef SharpHook.Native.UioHookEvent)
+  nameWithType: UioHook.PostEventDontMoveMouse(ref UioHookEvent)
+  nameWithType.vb: UioHook.PostEventDontMoveMouse(ByRef UioHookEvent)
+- uid: SharpHook.Native.UioHook.PostEventDontMoveMouse*
+  name: PostEventDontMoveMouse
+  href: api/SharpHook.Native.UioHook.html#SharpHook_Native_UioHook_PostEventDontMoveMouse_
+  commentId: Overload:SharpHook.Native.UioHook.PostEventDontMoveMouse
   isSpec: "True"
-  fullName: SharpHook.Native.UioHook.PostEventIgnoreMouseCoordinates
-  nameWithType: UioHook.PostEventIgnoreMouseCoordinates
+  fullName: SharpHook.Native.UioHook.PostEventDontMoveMouse
+  nameWithType: UioHook.PostEventDontMoveMouse
 - uid: SharpHook.Native.UioHook.Run
   name: Run()
   href: api/SharpHook.Native.UioHook.html#SharpHook_Native_UioHook_Run
