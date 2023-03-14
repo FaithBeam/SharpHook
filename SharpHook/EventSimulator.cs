@@ -60,7 +60,6 @@ public class EventSimulator : IEventSimulator
             Mouse = new() { Button = button, X = x, Y = y }
         });
 
-#if Windows || Linux
     /// <summary>
     /// Simulates pressing a mouse button at the current mouse coordinates.
     /// </summary>
@@ -84,7 +83,6 @@ public class EventSimulator : IEventSimulator
             Type = EventType.MouseReleased,
             Mouse = new() { Button = button }
         });
-#endif
 
 
     /// <summary>
@@ -128,8 +126,6 @@ public class EventSimulator : IEventSimulator
     private UioHookResult PostEvent(UioHookEvent e) =>
         UioHook.PostEvent(ref e);
 
-#if Windows || Linux
     private UioHookResult PostEventIgnoreMouseCoordinates(UioHookEvent e) =>
-        UioHook.PostEventIgnoreMouseCoordinates(ref e);
-#endif
+        UioHook.PostEventDontMoveMouse(ref e);
 }

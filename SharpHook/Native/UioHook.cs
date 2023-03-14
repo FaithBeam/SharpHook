@@ -166,7 +166,6 @@ public static partial class UioHook
     public static extern UioHookResult PostEvent(ref UioHookEvent e);
 #endif
 
-#if Windows || Linux
     /// <summary>
     /// Posts a fake input event and ignores the mouse coordinates. This is useful to send mouse button events
     /// at the current mouse cursor position.
@@ -249,11 +248,10 @@ public static partial class UioHook
     /// <seealso cref="EventSimulator" />
 #if NET7_0_OR_GREATER
     [LibraryImport(LibUioHook, EntryPoint = "hook_post_event_dont_move_mouse")]
-    public static partial UioHookResult PostEventIgnoreMouseCoordinates(ref UioHookEvent e);
+    public static partial UioHookResult PostEventDontMoveMouse(ref UioHookEvent e);
 #else
     [DllImport(LibUioHook, EntryPoint = "hook_post_event_dont_move_mouse")]
-    public static extern UioHookResult PostEventIgnoreMouseCoordinates(ref UioHookEvent e);
-#endif
+    public static extern UioHookResult PostEventDontMoveMouse(ref UioHookEvent e);
 #endif
 
     /// <summary>
