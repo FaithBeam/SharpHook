@@ -247,10 +247,10 @@ public static partial class UioHook
     /// </remarks>
     /// <seealso cref="EventSimulator" />
 #if NET7_0_OR_GREATER
-    [LibraryImport(LibUioHook, EntryPoint = "hook_post_event_dont_move_mouse")]
+    [LibraryImport(LibUioHook, EntryPoint = "hook_post_event_at_current_mouse_position")]
     public static partial UioHookResult PostEventDontMoveMouse(ref UioHookEvent e);
 #else
-    [DllImport(LibUioHook, EntryPoint = "hook_post_event_dont_move_mouse")]
+    [DllImport(LibUioHook, EntryPoint = "hook_post_event_at_current_mouse_position")]
     public static extern UioHookResult PostEventDontMoveMouse(ref UioHookEvent e);
 #endif
 
