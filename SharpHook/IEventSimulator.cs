@@ -42,7 +42,6 @@ public interface IEventSimulator
     /// <returns>The result of the operation.</returns>
     UioHookResult SimulateMouseRelease(short x, short y, MouseButton button);
 
-#if Windows || Linux
     /// <summary>
     /// Simulates pressing a mouse button at the current mouse coordinates.
     /// </summary>
@@ -56,7 +55,6 @@ public interface IEventSimulator
     /// <param name="button">The mouse button to release.</param>
     /// <returns>The result of the operation.</returns>
     UioHookResult SimulateMouseRelease(MouseButton button);
-#endif
 
     /// <summary>
     /// Simulates moving a mouse pointer.
