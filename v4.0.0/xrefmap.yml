@@ -650,6 +650,12 @@ references:
   isSpec: "True"
   fullName: SharpHook.IEventSimulator.SimulateMouseMovement
   nameWithType: IEventSimulator.SimulateMouseMovement
+- uid: SharpHook.IEventSimulator.SimulateMousePress(SharpHook.Native.MouseButton)
+  name: SimulateMousePress(MouseButton)
+  href: api/SharpHook.IEventSimulator.html#SharpHook_IEventSimulator_SimulateMousePress_SharpHook_Native_MouseButton_
+  commentId: M:SharpHook.IEventSimulator.SimulateMousePress(SharpHook.Native.MouseButton)
+  fullName: SharpHook.IEventSimulator.SimulateMousePress(SharpHook.Native.MouseButton)
+  nameWithType: IEventSimulator.SimulateMousePress(MouseButton)
 - uid: SharpHook.IEventSimulator.SimulateMousePress(System.Int16,System.Int16,SharpHook.Native.MouseButton)
   name: SimulateMousePress(Int16, Int16, MouseButton)
   href: api/SharpHook.IEventSimulator.html#SharpHook_IEventSimulator_SimulateMousePress_System_Int16_System_Int16_SharpHook_Native_MouseButton_
@@ -663,6 +669,12 @@ references:
   isSpec: "True"
   fullName: SharpHook.IEventSimulator.SimulateMousePress
   nameWithType: IEventSimulator.SimulateMousePress
+- uid: SharpHook.IEventSimulator.SimulateMouseRelease(SharpHook.Native.MouseButton)
+  name: SimulateMouseRelease(MouseButton)
+  href: api/SharpHook.IEventSimulator.html#SharpHook_IEventSimulator_SimulateMouseRelease_SharpHook_Native_MouseButton_
+  commentId: M:SharpHook.IEventSimulator.SimulateMouseRelease(SharpHook.Native.MouseButton)
+  fullName: SharpHook.IEventSimulator.SimulateMouseRelease(SharpHook.Native.MouseButton)
+  nameWithType: IEventSimulator.SimulateMouseRelease(MouseButton)
 - uid: SharpHook.IEventSimulator.SimulateMouseRelease(System.Int16,System.Int16,SharpHook.Native.MouseButton)
   name: SimulateMouseRelease(Int16, Int16, MouseButton)
   href: api/SharpHook.IEventSimulator.html#SharpHook_IEventSimulator_SimulateMouseRelease_System_Int16_System_Int16_SharpHook_Native_MouseButton_
